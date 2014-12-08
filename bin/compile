@@ -2,8 +2,6 @@
 
 set -e
 
-source `dirname $0`/../configs.sh
-
 # parse and derive params
 BUILD_DIR=$1
 CACHE_DIR=$2
