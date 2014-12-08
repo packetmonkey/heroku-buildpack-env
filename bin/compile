@@ -29,12 +29,20 @@ arrow() {
     sed -u 's/^/-----> /'
 }
 
+setEnv() {
+  echo "!!!!!!!!!!!!!!"
+  echo "!! EXPORTING ${$1}='${$2}'"
+  `export ${$1}=\'${$2}\'`
+  echo "!!!!!!!!!!!!!!"
+}
 
 echo "!!!!!!!!!!!!!!"
 echo "!! CONFIRMED WE ARE TRIGGERING IN THE CORRECT PLACE"
 echo "!!!!!!!!!!!!!!"
 env
 echo "!!!!!!!!!!!!!!"
-echo "!! EXPORTING CPPFLAGS='-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/'"
-export CPATH="${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/"
-echo "!!!!!!!!!!!!!!"
+setEnv 'CPPFLAGS' '-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/'
+# echo "!!!!!!!!!!!!!!"
+# echo "!! EXPORTING CPPFLAGS='-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/'"
+# export CPATH="${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/"
+# echo "!!!!!!!!!!!!!!"
