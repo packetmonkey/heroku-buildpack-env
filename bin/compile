@@ -33,6 +33,8 @@ arrow() {
 echo "!!!!!!!!!!!!!!"
 echo "!! CONFIRMED WE ARE TRIGGERING IN THE CORRECT PLACE"
 echo "!!!!!!!!!!!!!!"
+env
+echo "!!!!!!!!!!!!!!"
 echo "!! EXPORTING CPPFLAGS='-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/'"
 export CPPFLAGS="-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/"
 echo "!!!!!!!!!!!!!!"
