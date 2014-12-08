@@ -36,5 +36,5 @@ echo "!!!!!!!!!!!!!!"
 env
 echo "!!!!!!!!!!!!!!"
 echo "!! EXPORTING CPPFLAGS='-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/'"
-export CPPFLAGS="-I${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/"
+export CPATH="${BUILD_DIR}/vendor/graphicsmagick/include/GraphicsMagick/"
 echo "!!!!!!!!!!!!!!"
